@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add New Workout</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form (submit)="OnSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label Fixed>Title</ion-label>
+        <ion-input [(ngModel)]="title" name="title" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label Fixed>Note</ion-label>
+        <ion-input [(ngModel)]="note" name="note" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label Fixed>Type</ion-label>
+        <ion-select [(ngModel)]="type" name="type">
+          <ion-option value="Jogging">Jogging</ion-option>
+          <ion-option value="Swimming">Swimming</ion-option>
+          <ion-option value="Boxing">Boxing</ion-option>
+          <ion-option value="Free Weights">Free Weights</ion-option>
+          <ion-option value="Aerobics">Aerobics</ion-option>
+          <ion-option value="Yoga">Yoga</ion-option>
+          <ion-option value="Intense">Intense</ion-option>
+          <ion-option value="Parkour">Parkour</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button type="submit" block>Add Workout</button>
+      </ion-item>
+
+
+    </ion-list>
+  </form>
+  <h3>Add new Workout</h3>
+  <button ion-button color="primary" menuToggle>Toggle Menu</button>
+
+</ion-content>

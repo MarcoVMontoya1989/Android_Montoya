@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hello Ionic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<h3>Welcome to your Workouts</h3>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <div class="row">
+        <div *ngIf="workoutsList">
+          <p *ngFor="let item of workoutsList" (click)="workoutSelected($event, item)">
+            {{item.title}}
+          </p>
+         
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <!--<div *ngIf="workoutsList">
+    <ul>
+      <li *ngFor="let item of workoutsList">
+        {{item.title}}
+      </li>
+    </ul>
+  </div>-->
+  <p>
+    <button ion-button color="primary" menuToggle>Toggle Menu</button>
+  </p>
+
+</ion-content>
